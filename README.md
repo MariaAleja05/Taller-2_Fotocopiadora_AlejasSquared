@@ -2,6 +2,10 @@
 ### Fecha:  18-20-2023
 ### **Nombre del equipo:** Fotocopiadora AlejasSquared
   **Integrantes del equipo:** María Alejandra Niño Peña y María Alejandra Varela
+  
+### **Logo**:
+![Black   White Minimalist Aesthetic Initials Font Logo](https://github.com/MariaAleja05/Taller-1_Fotocopiadora_AlejasSquared/assets/141857519/21d404e4-cf8f-42fb-9168-805f1a8bd2f0)
+
 ### 1. Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número. Pista: Utilice los operadores módulo (%) y división entera (//).
 * EXPLICACIÓN
 * Mirar archivo Punto1.py
