@@ -4,7 +4,7 @@
   **Integrantes del equipo:** María Alejandra Niño Peña y María Alejandra Varela
   
 ### **Logo**:
-![Black   White Minimalist Aesthetic Initials Font Logo](https://github.com/MariaAleja05/Taller-1_Fotocopiadora_AlejasSquared/assets/141857519/21d404e4-cf8f-42fb-9168-805f1a8bd2f0)
+FALTA
 
 ### 1. Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número. Pista: Utilice los operadores módulo (%) y división entera (//).
 * EXPLICACIÓN
@@ -40,7 +40,28 @@
 * EXPLICACIÓN
 * Mirar archivo Punto6.ipynb
 ```pseudocode
+def ElementosRepetidos(lista):                # Función para encontrar elementos repetidos
+  lista2=[]                                   # Lista para colocar los valores que ya se miraron
+  for j in lista:                             # Evalua cada elemento de la lista original
+    if j in lista2:                           # Evalua si el elemento esta en la lista 2
+      return True                             # Significa que está repetido
+    lista2.append(j)                          # Añade el elemento a la lista 2 para ver si se repite
+  return False                                # No hay ningún elemento repetido
 
+if __name__ == "__main__":
+  lista=[]                                    # Lista vacía que crea el usuario
+  n = int(input("Ingrese la cantidad de elementos de la lista: "))  # La cantidad de elementos
+
+  for i in range(n):                          # Repite según la cantidad de elementos que tendrá la lista
+    a = float(input("Ingrese un elemento de la lista: "))
+    lista.append(a)                           # Añade el elemento a la lista
+  rta=ElementosRepetidos(lista)               # Llama la función
+  print("--------------------------------------------------")
+  print(lista)
+  if rta:                                     # Si el resultado de la función es True
+    print("La lista SI tiene elementos repetidos")
+  else:                                       # Si el resultado de la función es False
+    print("La lista NO tiene elementos repetidos")
 ```
 ### 7. Desarrollar un programa que determine si en una lista se encuentra una cadena de caracteres con dos o más vocales. Si la cadena existe debe imprimirla y si no existe debe imprimir 'No existe'.
 * EXPLICACIÓN
