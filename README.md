@@ -73,7 +73,27 @@ if __name__ == "__main__":
 * EXPLICACIÓN
 * Mirar archivo Punto8.ipynb
 ```pseudocode
+def ElementosRepetidos(lista, lista2):
+  for i in range(n):      # Se repite por cada elemento de la lista
+    for j in lista:       # Toma cada elemento de la primera lista
+      if j in lista2:     # Se mira si ese elemento está en la lista 2
+        lista.remove(j)   # Si está se elimina de la primera lista
+  return lista
 
+if __name__ == "__main__":
+  lista=[]
+  lista2=[]
+  n = int(input("Ingrese la cantidad de elementos de la primera lista: "))    # Ingresar # de elementos
+  for i in range(n):                                                          # Ingresar elementos
+    a = float(input("Ingrese un elemento de la primera lista: "))
+    lista.append(a)
+  m = int(input("Ingrese la cantidad de elementos de la segunda lista: "))    # Ingresar # de elementos
+  for i in range(m):                                                          # Ingresar elementos
+    b = float(input("Ingrese un elemento de la segunda lista: "))
+    lista2.append(b)
+  rta=ElementosRepetidos(lista, lista2)                                       # Se llama la función
+  print("--------------------------------------------------")
+  print("La primera lista tiene los siguientes elementos que no están en la segunda lista: " + str(rta))
 ```
 ### 9. Resolver el punto 7 del taller 1 usando operaciones con vectores.
 * EXPLICACIÓN
