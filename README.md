@@ -28,7 +28,50 @@ FALTA
 * EXPLICACIÓN
 * Mirar archivo Punto4.ipynb
 ```pseudocode
+import math                                           # Se importa la biblioteca math
+from math import cos, factorial                       # Se importan las funciones cos y factorial
 
+def AproxFuncionCoseno(x: float, n:int) -> float:     # Se crea una función para hallar la operación
+  suma: float = 0                                     # La suma inicia en cero
+  for i in range(0, n+1):                             # Para repetir la operación con cada elemento
+    y = ((-1)**i)*((x**(2*i))/factorial(2*i))         # Operación de la formula
+    suma += y
+  return suma                                         # Resultado final
+
+if __name__ == "__main__":
+  x = float(input("Ingrese un número real: "))        # Ingresar el número x
+  n: int = 1                                          # La sumatoria inicia desde 1
+  aprox: float = AproxFuncionCoseno(x, n)             # Se llama la función
+  valorReal: float = cos(x)                           # Se calcula el valor real
+  diferencia: float = valorReal-aprox                 # Se halla la diferencia
+
+  print("------------------------------------------------------------------------------")
+
+  while ((abs(valorReal - aprox)/valorReal * 100)>0.1):     #Para el 10%
+    aprox: float = AproxFuncionCoseno(x, n)
+    n += 1
+  print("El valor de n para tener un error menor a 0.1: " + str(n))
+
+  while ((abs(valorReal - aprox)/valorReal * 100)>0.01):    #Para el 1%
+    aprox: float = AproxFuncionCoseno(x, n)
+    n += 1
+  print("El valor de n para tener un error menor a 0.01: " + str(n))
+
+  while ((abs(valorReal - aprox)/valorReal * 100)>0.001):   # Para el 0.1%
+    aprox: float = AproxFuncionCoseno(x, n)
+    n += 1
+  print("El valor de n para tener un error menor a 0.001: " + str(n))
+
+  while ((abs(valorReal - aprox)/valorReal * 100)>0.00001): #Para el 0.001%
+    aprox: float = AproxFuncionCoseno(x, n)
+    n += 1
+  print("El valor de n para tener un error menor a 0.00001: " + str(n))
+
+  print("------------------------------------------------------------------------------")
+
+  print("La aproximación es: " + str(aprox))                # Resultado de la aprox
+  print("El valor real es: " + str(valorReal))              # Resultado del valor real
+  print("La diferencia entre estos dos valores es de: " + str(diferencia))  #Resultado diferencia
 ```
 ### 5. Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde una perpectiva tanto iterativa como recursiva. Pista: Puede ser de utilidad chequear el Algoritmo de Euclides para el cálculo del Máximo Común Divisor, y revisar cómo se relaciona este último con el Mínimo Común Múltiplo.
 * EXPLICACIÓN
