@@ -145,8 +145,25 @@ if __name__ == "__main__":
 
 ```
 ### 10. Suponga que se tiene una lista A con ciertos números enteros. Desarrolle una función que, independientemente de los números que se encuentran en la lista A, tome aquellos números que son múltiplos de 3 y los guarde en una lista nueva, la cual debe ser retornada por la función. Implemente la perspectiva de un patrón de acumulación y también de comprensión de listas. Desafío: Si ya lo logró, inténtelo ahora sin utilizar el módulo (%). Pista: Un número es multiplo de 3 si la suma de sus dígitos también lo es, ¿verdad?
-* EXPLICACIÓN
 * Mirar archivo Punto10.ipynb
+* EXPLICACION USANDO MÓDULO (%)
+```pseudocode
+def Multiplos(lista):                                                         # La función retornará los valores que sean multiplos de 3
+  return [i for i in lista if i % 3 == 0]                                     # Usando List comprehension
+                                                                              # Si el residuo al dividir cada número por 3 es cero, es múltiplo
+
+if __name__ == "__main__":
+  lista=[]
+  n = int(input("Ingrese la cantidad de elementos de la primera lista: "))    # Ingresar la cantidad de elementos
+  for i in range(n):                                                          # Ingresar elementos
+    a = int(input("Ingrese un elemento de la primera lista: "))
+    lista.append(a)
+  rta=Multiplos(lista)                                                        # Se llama la función
+  print("--------------------------------------------------")
+  print("Tú lista: " + str(lista))                                            # Se imprime la lista original que creó el usuario
+  print("Los multiplos de 3 de esa lista son: " + str(rta))                   # Se imprime la lista con los elementos que son múltiplos de 3
+```
+* EXPLICACION RETO SIN USAR MÓDULO (%)
 ```pseudocode
 
 ```
