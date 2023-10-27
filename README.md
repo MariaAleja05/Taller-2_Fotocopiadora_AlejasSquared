@@ -20,7 +20,7 @@ while numero > 0:
 print("Los dígitos separados son:", digitos)
 ```
 ### 2. Desarrollar un programa que ingrese un número flotante n y separe su parte entera de la parte decimal, y luego entregue los dígitos tanto de la parte entera como de la decimal.
-* EXPLICACIÓN
+* EXPLICACION
 * Mirar archivo Punto2.ipynb
 ```python
 
@@ -65,7 +65,10 @@ if __name__ =="__main__":
 
 ```
 ### 4. Diseñar una función que permita calcular una aproximación de la función coseno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Taylor. nota: use math para traer la función coseno y mostrar la diferencia entre el valor real y la aproximación. Calcule con cuántos términos de la serie (i.e: cuáles valores de n), se tienen errores del 10%, 1%, 0.1% y 0.001%.
-* EXPLICACIÓN
+* Para este problema primero importe math y las funciones cos y factorial para desarrollar las operaciones.
+Creé una función con un for de rango desde 0 hasta n+1 (para incluir n) donde va a realizar la operación y el resultado de esta operación se le irá sumando a la variable "suma" para calcularla. La función retornará la aproximación de esta operación en la variable suma.
+
+En la función main, se le solicita al usuario ingresar el número real, definimos que n(número de iteraciones) comience a evaluar desde 1, llamamos la función de la aprox del seno para mostrar el resultado de la aproximación, luego para mostrar el valor real lo calculamos usando la función de math: cos. Hay un while para calcular el número de veces n que se puede realizar la operación mientras que el error entre la aprox y el valor real no se pase del 10%, 1%, 0.1$, 0.001% en este se llama la función para que n se vaya actualizando en esta mientras se cumpla la condición.
 * Mirar archivo Punto4.ipynb
 ```python
 import math                                           # Se importa la biblioteca math
@@ -172,7 +175,9 @@ if __name__ =="__main__":
 " Codificar no es solo hacer código"
                                  -Un profe particular-
 ### 6. Desarrollar un programa que determine si en una lista existen o no elementos repetidos. Pista: Maneje valores booleanos y utilice el operador in.
-* EXPLICACIÓN
+* Primero creé una función donde hay un for que evaluará cada elemento de la lista que creó el usuario. Luego hay un if que mira si el elemento se encuentra en la lista 2 alterna que se creá donde se irán añadiendo los valores que ya se evaluaron, si en algún momento se encuentra un valor que este en la lista original y en la alterna significa que ya se había mirado ese número en la original, y por lo tanto, si habrán elementos repetidos y la función retornará True.
+
+En la función main, se le solicita al usuario ingresar la cantidad de elementos que tendrá su lista, hay un for para que el usuario ingrese cada elemento de la lista, proceso que se repitirá según la longitud de la lista. Se llama la función y en un condicional se expresa que si la función retorna True, significa que sí hay valores repetidos, de lo contrario, no habrá.
 * Mirar archivo Punto6.ipynb
 ```python
 def ElementosRepetidos(lista):                # Función para encontrar elementos repetidos
@@ -217,7 +222,9 @@ if __name__ =="__main__":
   print(ev)
 ```
 ### 8. Desarrollar un programa que dadas dos listas determine que elementos tiene la primer lista que no tenga la segunda lista.
-* EXPLICACIÓN
+* Primero creé una función donde hay un for que evaluará cada elemento de la lista que creó el usuario. Hay otro for anidado que mirará si el elemento se seleccionada se encuentra en la lista 2, en caso de ser así el elemento se eliminará de la lista (ya que se buscan todos los elementos que no están en la segunda lista), si no está no se borrara de la primera lista.
+
+En la función main, se crearon las 2 listas. Se le solicita al usuario ingresar la cantidad de elementos que tendrá su lista, hay un for para que el usuario ingrese cada elemento de la lista, proceso que se repitirá según la longitud de la lista. Se repite el anterior proceso para la creación de la segunda lista. Se llama la función y se imprimirá la primera lista sin los elementos que se encuentran en la segunda lista.
 * Mirar archivo Punto8.ipynb
 ```python
 def ElementosRepetidos(lista, lista2):
@@ -311,14 +318,13 @@ if __name__ =="__main__":
   Potencia=mayor_al_menor(Lista)
   Cubica=cubica(Lista)
   print(f"Promedio={El_promedio} \n\nMediana={La_mediana} \n\nPromedio multiplicativo={El_multiplicativo} \n\nForma ascendente={Forma_Ascendente} \n\nForma descendente={Forma_Descendente} \n\nPotencia del mayor al menor={Potencia} \n\nCubica del menor={cubica} ")
-
-
-
-
 ```
 ### 10. Suponga que se tiene una lista A con ciertos números enteros. Desarrolle una función que, independientemente de los números que se encuentran en la lista A, tome aquellos números que son múltiplos de 3 y los guarde en una lista nueva, la cual debe ser retornada por la función. Implemente la perspectiva de un patrón de acumulación y también de comprensión de listas. Desafío: Si ya lo logró, inténtelo ahora sin utilizar el módulo (%). Pista: Un número es multiplo de 3 si la suma de sus dígitos también lo es, ¿verdad?
 * Mirar archivo Punto10.ipynb
-* EXPLICACION USANDO MÓDULO (%)
+* USANDO MÓDULO (%)
+Primero creé una función donde use comprensión de listas para hacer todo en una línea de código, por medio de un for mirará cada elemento y si el residuo cuando se divide por 3 es cero entonces se acumulará a la lista que retornará de multiplos de 3, de lo contrario no tendrá en cuenta el valor.
+
+En la función main, se le solicita al usuario ingresar la cantidad de elementos que tendrá su lista, hay un for para que el usuario ingrese cada elemento de la lista, proceso que se repitirá según la longitud de la lista. Se llama la función y se muestra la lista del usuario y, la lista que creó la función con los valores que pertenecían a esta y son múltiplos de 3.
 ```python
 def Multiplos(lista):                                                         # La función retornará los valores que sean multiplos de 3
   return [i for i in lista if i % 3 == 0]                                     # Usando List comprehension
