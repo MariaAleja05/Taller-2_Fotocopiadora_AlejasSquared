@@ -369,28 +369,28 @@ import math
 def Multiplos(lista):                                                         # Aquí utilicé separo los dígitos del número
   multiplos = []
 
-  for numero in lista:
+  for numero in lista:                                                        # Se evalua número por número de la lista
     suma=0
     digitos = []
-    numero_copy=numero
+    numero_copy=numero                                                        # Se crea una copia por que el numero se va a modificar al hallar los dígitos y será necesario saber el original
 
-    while numero > 0:
+    while numero > 0:                                                         # Para separar el número con digitos
         digito = numero % 10
-        digitos.insert(0, digito)                                             # Se van introduciendo los dígitos a una lista
+        digitos.insert(0, digito)                                            
         numero = numero // 10
 
-    for i in digitos:
+    for i in digitos:                                                         # Para empezar a hacer la suma de todos los digitos del número correspondiente
       digits=0
 
-      while digits!=1:
+      while digits!=1:                                                        # Para sumar los digitos
         suma+=i
 
-        if suma > 0:
+        if suma > 0:                                                          # Para evaluar cuando esa suma tenga una longitud de 1 digito
           digits = int(math.log10(suma)) + 1
         elif suma == 0:
           digits = 1
 
-      if suma==3 or suma==6 or suma==9:
+      if suma==3 or suma==6 or suma==9:                                       # Si esa suma de un dígito da alguno de esos números si el multiplo de 3
         multiplos.append(numero_copy)
 
   return multiplos
@@ -405,10 +405,4 @@ if __name__ == "__main__":
   print("--------------------------------------------------")
   print("Tú lista: " + str(lista))                                            # Se imprime la lista original que creó el usuario
   print("Los multiplos de 3 de esa lista son: " + str(rta))                   # Se imprime la lista con los elementos que son múltiplos de 3
-```
-### 11. BONO: Desarrollar un algoritmo que determine si una matriz es mágica. Se dice que una matriz cuadrada es mágica si la suma de cada una de sus filas, de cada una de sus columnas y de cada diagonal es igual.
-* EXPLICACIÓN
-* Mirar archivo Punto11.py
-```pseudocode
-
 ```
