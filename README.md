@@ -4,7 +4,8 @@
   **Integrantes del equipo:** María Alejandra Niño Peña y María Alejandra Varela
   
 ### **Logo**:
-![Imagen de WhatsApp 2023-10-27 a las 15 17 08_7c2dff0b](https://github.com/MariaAleja05/Taller-2_Fotocopiadora_AlejasSquared/assets/141885396/ca0e05f9-0842-4ae5-ba50-63e7866d0c09)
+![image](https://github.com/MariaAleja05/Taller-2_Fotocopiadora_AlejasSquared/assets/141885396/e6da1e9d-524f-4637-8273-b25089c227fa)
+
 
 
 ### 1. Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número. Pista: Utilice los operadores módulo (%) y división entera (//).
