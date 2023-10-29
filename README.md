@@ -4,8 +4,7 @@
   **Integrantes del equipo:** María Alejandra Niño Peña y María Alejandra Varela
   
 ### **Logo**:
-![image](https://github.com/MariaAleja05/Taller-2_Fotocopiadora_AlejasSquared/assets/141885396/c872919e-79dc-48c3-bb08-9c1cf3ea21c1)
-
+![Imagen de WhatsApp 2023-10-27 a las 15 17 08_7c2dff0b](https://github.com/MariaAleja05/Taller-2_Fotocopiadora_AlejasSquared/assets/141885396/ca0e05f9-0842-4ae5-ba50-63e7866d0c09)
 
 
 ### 1. Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número. Pista: Utilice los operadores módulo (%) y división entera (//).
@@ -22,7 +21,9 @@ while numero > 0:
 print("Los dígitos separados son:", digitos)
 ```
 ### 2. Desarrollar un programa que ingrese un número flotante n y separe su parte entera de la parte decimal, y luego entregue los dígitos tanto de la parte entera como de la decimal.
-* EXPLICACION
+* Para iniciar crée una función con las listas que neceritaré. Convertí el número que se ingresó a tipo str para poder evaluarlo mejor, use un for para evaluar dígito por dígito y se van añadiendo a una lista, luego se busca dondé hay un punto y desde allí hay otro for para eliminar los valores de la lista entera que estaban después del punto y añadirlos a la lista de la parte flotante. La función retorna las dos listas.
+
+En la función main se le pide al usuario ingresar el número que se evaluará y se llama la función.
 * Mirar archivo Punto2.ipynb
 ```python
 def Digitos(n):                                                 # La función
@@ -363,7 +364,17 @@ if __name__ == "__main__":
   print("Tú lista: " + str(lista))                                            # Se imprime la lista original que creó el usuario
   print("Los multiplos de 3 de esa lista son: " + str(rta))                   # Se imprime la lista con los elementos que son múltiplos de 3
 ```
-* EXPLICACION RETO SIN USAR MÓDULO (%)
+* RETO SIN USAR MÓDULO (%)
+
+Antes que nada...que código tan terriblemeente HORRIBLEEEEE
+
+Segunda cosa por decir, aunque se demorá en cargar SI saca un resultado correcto así que se logroooo
+
+Tercera cosa por decir, el código se explica viendolo JAJAJA llevo tanto tiempo pensandolo que ya ni quiero volverlo a ver...hay varios comentarios en el código para que se entienda mejor la expliación y que se hace en cada for. Primero, importe math porque se usará una función de esta más adelante. Creé una función donde hay varios for anidados, el general es para evaluar cada número de la lista, el segundo for es para separar todos los dígitos de cada valor, hay un while para sumar los dígitos hasta que la suma tenga solo un dígito, esta última condición se evalúa en un condicional y para mirar la cantidad de dígitos se usa la función log10 de math, hay un condicional final que mira si cuando la suma de un dígito es igual a 3, 6 o 9 (ya que estos números son múltiplos de 3 de una cifra). La función retornará la lista de múltiplos
+
+En la función main, se pide ingresar la cantidad de elementos de la lista, se usa un for para añadir los elementos y se llama la función.
+
+El sentido del código es sumar los digitos del número las veces que sea necesario y ver si ese número de una cifra de la suma es igual a algún múltiplo que conocemos de 3. Así no se usa el modulo sino se usan sumatorias de los dígitos para hallar si es múltiplo.
 ```python
 import math
 
