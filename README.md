@@ -363,7 +363,47 @@ if __name__ == "__main__":
 ```
 * EXPLICACION RETO SIN USAR MÓDULO (%)
 ```python
+import math
 
+def Multiplos(lista):                                                         # Aquí utilicé separo los dígitos del número
+  multiplos = []
+
+  for numero in lista:
+    suma=0
+    digitos = []
+    numero_copy=numero
+
+    while numero > 0:
+        digito = numero % 10
+        digitos.insert(0, digito)                                             # Se van introduciendo los dígitos a una lista
+        numero = numero // 10
+
+    for i in digitos:
+      digits=0
+
+      while digits!=1:
+        suma+=i
+
+        if suma > 0:
+          digits = int(math.log10(suma)) + 1
+        elif suma == 0:
+          digits = 1
+
+      if suma==3 or suma==6 or suma==9:
+        multiplos.append(numero_copy)
+
+  return multiplos
+
+if __name__ == "__main__":
+  lista=[]
+  n = int(input("Ingrese la cantidad de elementos de la primera lista: "))    # Ingresar la cantidad de elementos
+  for i in range(n):                                                          # Ingresar elementos
+    a = int(input("Ingrese un elemento de la primera lista: "))
+    lista.append(a)
+  rta=Multiplos(lista)                                                        # Se llama la función
+  print("--------------------------------------------------")
+  print("Tú lista: " + str(lista))                                            # Se imprime la lista original que creó el usuario
+  print("Los multiplos de 3 de esa lista son: " + str(rta))                   # Se imprime la lista con los elementos que son múltiplos de 3
 ```
 ### 11. BONO: Desarrollar un algoritmo que determine si una matriz es mágica. Se dice que una matriz cuadrada es mágica si la suma de cada una de sus filas, de cada una de sus columnas y de cada diagonal es igual.
 * EXPLICACIÓN
