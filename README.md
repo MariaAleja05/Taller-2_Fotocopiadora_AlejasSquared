@@ -4,7 +4,8 @@
   **Integrantes del equipo:** María Alejandra Niño Peña y María Alejandra Varela
   
 ### **Logo**:
-FALTA
+![Imagen de WhatsApp 2023-10-27 a las 15 17 08_7c2dff0b](https://github.com/MariaAleja05/Taller-2_Fotocopiadora_AlejasSquared/assets/141885396/ca0e05f9-0842-4ae5-ba50-63e7866d0c09)
+
 
 ### 1. Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número. Pista: Utilice los operadores módulo (%) y división entera (//).
 * Para este punto lo primero es inicializar una lista donde se van almacenar los dígitos, posteriormente en un ciclo while con caso base que el número sea mayor que cero, el número se divide entre 10 y de eso se toma el residuo, el número que resultó es el último dígito de el número inicial. Ese dígito se agrega a una lista y por último el número inicial se divide entre 10 y se toma su parte entera para eliminar el dígito que ya descubrimos.                                                                                                                                                                                                                                   
