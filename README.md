@@ -23,7 +23,27 @@ print("Los dígitos separados son:", digitos)
 * EXPLICACION
 * Mirar archivo Punto2.ipynb
 ```python
+def Digitos(n):                                                 # La función
+  digitos=[]                                                    # Lista para introducir los dígitos
+  entero=[]                                                     # Lista para ingresar la parte entera
+  decimal=[]                                                    # Lista para ingresar la parte decimal
+  str_n=str(n)                                                  # Convertir el número a str
+  for i in str_n:                                               # Un for que va con cada elemento del str
+    decimal.append(i)                                           # Se añaden todos los elementos    
+  decimal_aux=decimal[:]                                        # Se usará más adelante 
+  for i in decimal_aux:                                         # Con cada elemento de la lista se busca donde hay un punto y así se divide la parte entera de la decimal
+    if i==".":
+      decimal.remove(i)
+      break
+    else:
+      decimal.remove(i)                                         # Lo que se elemina del decima se añade a la entera
+      entero.append(i)
+  print("La parte entera es: " + str(entero))                   # Se muestra el resultado
+  print("La parte decimal es: " + str(decimal))
 
+if __name__ == "__main__":
+  n = float(input("Ingrese el número:"))                        # El usuario ingresa el número flotante
+  Digitos(n)
 ```
 ### 3. Desarrollar un programa que permita ingresar dos números enteros y determinar si se tratan de números espejos, definiendo números espejos como dos números a y b tales que a se lee de izquierda a derecha igual que se lee b de derecha a izquierda, y viceversa.
 * En este punto definimos dos funciones, la primera para almacenar los dígitos de los números en una lista y segunda (y necesariamente larga porque podríamos usar ```Lista[::-1]```) que permite swapear la lista de números. Por último pedimos al usuario que ingrese los dos números y se hace una comparación entre la lista swapeada del primero y la lista original del segundo. Si son ifuales entonces los números son espejo, de resto no.
